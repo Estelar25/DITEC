@@ -1,10 +1,49 @@
 <html>
     <head>
-        <title></title>
+        <title>LOGIN</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
     </head>
-    <body>
+<body>
+    <div class="avatar" id="avatar" title="Perfil">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="36px" height="36px">
+      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4
+        v2h16v-2c0-2.66-5.33-4-8-4z"/>
+    </svg>
+  </div>
 
-    </body>
+  <div class="dropdown-menu" id="dropdownMenu" aria-hidden="true">
+    <a href="#">Perfil</a>
+    <a href="#">Ajustes</a>
+    <a href="#">Cerrar sesión</a> 
+  </div>
+
+  <script>
+    const avatar = document.getElementById('avatar');
+    const menu = document.getElementById('dropdownMenu');
+
+    avatar.addEventListener('click', () => {
+      const isHidden = menu.getAttribute('aria-hidden') === 'true';
+      if (isHidden) {
+        menu.style.display = 'flex';
+        menu.setAttribute('aria-hidden', 'false');
+      } else {
+        menu.style.display = 'none';
+        menu.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!avatar.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = 'none';
+        menu.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+
+
+</body>
 </html>

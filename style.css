@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -29,3 +30,21 @@ body {
     .menu a.active {
       background-color: #16a085;
     }
+=======
+.dropdown{
+        margin-left: 1450;
+        background-color : #012144;
+        
+}
+.btn btn-secondary dropdown-toggle{
+    background-color : #06386d;
+}
+ h1{text-align: center;}
+p{text-align:center;} 
+
+h2{text-align: center;} 
+ h3{text-align: left;}  
+ p{text-align:left;}
+
+ h4{text-align: left;}  
+>>>>>>> 5c299a8ccf42d1b240497f0b6f279124856d7200

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+ <title>Formulario de Registro - Colegio Hermana Josefina Serrano</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f5f3ef;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border: 2px solid #003366;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Georgia', serif;
+      color: #003366;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #003366;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color:#003366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #003366;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <div class="form-container">
+
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cross_icon.svg/1024px-Cross_icon.svg.png" alt="Logo Colegio">
+     
+    <h2>Registro de Estudiantes<br>Colegio Hermana Josefina Serrano</h2>
+    <form action="procesar.php" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required>
+
+      <label for="fecha_inicio">Fecha de inicio:</label>
+      <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" min="3" max="100" required>
+
+      <label for="tipo_documento">Tipo de documento:</label>
+      <select id="tipo_documento" name="tipo_documento" required>
+        <option value="">Seleccione...</option>
+        <option value="DNI">Tarjeta de identidad</option>
+        <option value="Pasaporte">Cedula ciudadana</option>
+        <option value="Cédula">Cedula extranjera</option>
+      </select>
+
+      <label for="numero_documento">Numero de documento:</label>
+      <input type="text" id="numero_documento" name="numero_documento" required>
+
+      <label for="celular">Celular:</label>
+      <input type="tel" id="celular" name="celular" pattern="[0-9]{10}" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="rango">Rango:</label>
+      <select id="rango" name="rango" required>
+        <option value="">Seleccione...</option>
+        <option value="Estudiante">Estudiante</option>
+        <option value="Profesor">Profesor</option>
+        <option value="Coordinador">Coordinador</option>
+      </select>
+
+      <label for="grado">Grado:</label>
+      <select id="grado" name="grado" required>
+        <option value="">Seleccione...</option>
+        <option value="Primero">Primero</option>
+        <option value="Segundo">Segundo</option>
+        <option value="Tercero">Tercero</option>
+        <option value="Cuarto">Cuarto</option>
+        <option value="Quinto">Quinto</option>
+        <option value="Sexto">Sexto</option>
+         <option value="Sexto">Septimo</option>
+          <option value="Sexto">Octavo</option>
+           <option value="Sexto">Noveno</option>
+            <option value="Sexto">Decimo</option>
+             <option value="Sexto">Undecimo</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+</body>
+</html>

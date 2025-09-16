@@ -31,10 +31,18 @@ body {
       background-color: #16a085;
     }
 =======
-.dropdown{
-        margin-left: 1450;
-        background-color : #012144;
-        
+.dropdown {
+  position: absolute;
+  top: 80px;       /* Ajusta según el tamaño del avatar */
+  right: 10px;     /* Pegado al borde derecho */
+  background-color: #9ac7f8;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 999;
 }
 .btn btn-secondary dropdown-toggle{
     background-color : #06386d;

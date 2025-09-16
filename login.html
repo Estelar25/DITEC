@@ -1,98 +1,94 @@
-<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login Centrado</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login Azul Centrado</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: #e6f0fa; /* azul claro */
+    font-family: Arial, sans-serif;
+  }
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #74ebd5, #acb6e5);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .login-container {
-      background-color: white;
-      padding: 40px 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      width: 100%;
-      max-width: 350px;
-      text-align: center;
-    }
+  .login-container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 95, 153, 0.3);
+    width: 320px;
+  }
 
-    .login-container h2 {
-      margin-bottom: 25px;
-      color: #333;
-    }
+  .login-container h2 {
+    text-align: center;
+    color: #005f99;
+    margin-bottom: 25px;
+  }
 
-    .login-container input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+  label {
+    display: block;
+    color: #005f99;
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 15px;
+  }
 
-    .login-container button {
-      width: 100%;
-      padding: 12px;
-      background-color: #007BFF;
-      border: none;
-      color: white;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007acc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
 
-    .login-container button:hover {
-      background-color: #0056b3;
-    }
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #0099ff;
+    outline: none;
+  }
 
-    .error {
-      color: red;
-      margin-top: 10px;
-      font-size: 14px;
-    }
-  </style>
+  button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #005f99, #007acc);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(90deg, #007acc, #0099ff);
+  }
+</style>
 </head>
 <body>
-  <div class="login-container">
-    <h2>Iniciar Sesión</h2>
-    <form onsubmit="return validarFormulario()" action="login.php" method="POST">
-      <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
-      <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
-      <button type="submit">Ingresar</button>
-    </form>
-    <p id="mensaje-error" class="error"></p>
-  </div>
 
-  <script>
-    function validarFormulario() {
-      const usuario = document.getElementById("usuario o email").value.trim();
-      const contrasena = document.getElementById("contrasena").value.trim();
-      const mensajeError = document.getElementById("mensaje-enviado");
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
+  <form action="#" method="POST">
+    <label for="username">Usuario</label>
+    <input type="text" id="username" name="username" required />
 
-      if (usuario === "" || contrasena === "") {
-        mensajeError.textContent = "Por favor, completa todos los campos.";
-        return false;
-      }
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" name="password" required />
 
-      mensajeError.textContent = "";
-      return true;
-    }
-  </script>
+    <button type="submit">Entrar</button>
+  </form>
+</div>
+
 </body>
 </html>
-
-

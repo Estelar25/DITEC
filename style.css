@@ -1,7 +1,16 @@
-<<<<<<< HEAD
+
 body {
       margin: 0;
       font-family: Arial, sans-serif;
+    }
+
+    nav{
+  top: 0;
+  width: 100%; 
+  position: fixed;
+  background-color: #333;
+
+
     }
 
      .menu {
@@ -30,7 +39,7 @@ body {
     .menu a.active {
       background-color: #16a085;
     }
-=======
+
 .dropdown{
         margin-left: 1450;
         background-color : #012144;
@@ -47,4 +56,4 @@ h2{text-align: center;}
  p{text-align:left;}
 
  h4{text-align: left;}  
->>>>>>> 5c299a8ccf42d1b240497f0b6f279124856d7200
+

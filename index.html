@@ -1,18 +1,66 @@
+
 <html>
     <head>
-        <title></title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+      <meta charset="UTF-8">
+      <title>Menú de Estudiante</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+      </script>
+        <style>
+            body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e6f0ff; /* Fondo azul claro */
+            font-family: Arial, sans-serif;
+            }
 
-    </head>
-<html lang="es">
-<head>
-    <meta charset="UTF-9">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <title>DITEC</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<style>
+            .contenedor {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 500px;
+            }
+
+            h2 {
+            color: #0056b3;
+            font-size: 24px;
+            }
+
+            input[type="email"] {
+            padding: 14px;
+            border: 2px solid #007BFF;
+            border-radius: 6px;
+            width: 80%;
+            font-size: 16px;
+            margin-bottom: 20px;
+            }
+
+            .btn-suscribir {
+            background-color: #007BFF; /* Azul */
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            }
+
+            .btn-suscribir:hover {
+            background-color: #0056b3; /* Azul oscuro */
+            }
+        </style>
+        <style>
     body {
         margin: 0;
         padding: 0;
@@ -48,9 +96,71 @@ input[type="email"] {
 }
 
 </style>
-<body>
+<script>
+    const avatar = document.getElementById('avatar');
+    const menu = document.getElementById('dropdownMenu');
 
-    <div class="menu-lateral">
+    avatar.addEventListener('click', () => {
+      const isHidden = menu.getAttribute('aria-hidden') === 'true';
+      if (isHidden) {
+        menu.style.display = 'flex';
+        menu.setAttribute('aria-hidden', 'false');
+      } else {
+        menu.style.display = 'none';
+        menu.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!avatar.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = 'none';
+        menu.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+</head>
+<body>
+    <div class="avatar" id="avatar" title="Perfil">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="36px" height="36px">
+      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4
+        v2h16v-2c0-2.66-5.33-4-8-4z"/>
+    </svg>
+  </div>
+
+  <div class="dropdown-menu" id="dropdownMenu" aria-hidden="true">
+    <a href="#">Perfil</a>
+    <a href="#">Ajustes</a>
+    <a href="#">Cerrar sesión</a> 
+  </div>
+    <!-- Menu Registro Estrella -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Menú registro
+  </button>
+  <ul class="dropdown-menu">
+    <li><button class="dropdown-item" type="button">Registro</button></li>
+    <li><button class="dropdown-item" type="button">Mi cuenta</button></li>
+    <li><button class="dropdown-item" type="button">Iniciar Sesion</button></li>
+  </ul>
+</div>  
+<div>
+  <!-- Menu princpal de henao -->
+  <div class="menu">
+    <nav>
+    <a href="#" class="active">Inicio</a>
+    <a href="#">Ver Promedio</a>
+    <a href="#">Materias</a>
+    <a href="#">Configuración</a>
+    <a href="#">Contactenos</a>
+    <a href="#">Espiritualidad</a>
+    </nav>
+  </div>
+
+  </div>
+
+
+<div class="menu-lateral">
         <h2>menu de la pantalla</h2>
         <ul>
             <li><a href="#inicio">INICIO</a></li>
@@ -58,12 +168,57 @@ input[type="email"] {
             <li><a href="#usuario">USUARIO</a></li>
             <li><a href="#ajuste">AJUSTE</a></li>
         </ul>
-    </div>
+</div>
+<!-- Este es quienes somos de estrella -->
+<div class="contenido-central">
+        <h2>¿Quiénes somos?</h2>
+        <p>¡HOLA! Somos un grupo de programadores apasionados por la educación y la tecnología. Nuestro objetivo es transformar la manera en que padres, estudiantes y maestros interactúan con las calificaciones y el rendimiento académico. <br> 
+            Hemos creado una plataforma innovadora que permite a cada estudiante ver sus calificaciones de manera clara y accesibles. Pero no solo nos enfocamos en presentar datos; queremos brindar un enfoque diferente que fomente la motivación y el aprendizaje .<br>
+            Nuestra página no solo muestra calificaciones, sino que también ofrece herramientas para que los estudiantes puedan reflexionar sobre su progreso, establecer metas y recibir reto alimentación costructiva. Creemos que cada nota cuenta una historia y queremos ayudar a los estudiantes a comprender su propio camino educativo. <br>
+            Estamos aquí para empoderar a los estudiantes y hacer que la experiencia de aprendizaje sea mas significativa y enriquecedora.
+        </p>
+        <h2>MISIÓN Y VISIÓN </h2>
+
+        <h3>Misión</h3>
+        <p>
+          Nuestra misión es fortalecer a estudiantes y educadores a través de herramientas accesibles y efectivas para la toma de notas, el estudio y la organización del conocimiento. <br> Buscamos simplificar el proceso de aprendizaje, fomentando la claridad, la retención de información y el desarrollo de hábitos de estudio productivos.</p>
+        <h4>Visión</h4>
+        <p> Aspiramos a ser la plataforma de referencia para la gestión del conocimiento educativo, reconocida por su innovación, facilidad de uso y contribución al éxito académico. <br> Imaginamos un futuro donde cada estudiante tenga a su alcance las mejores herramientas para capturar, organizar y comprender la información, transformando la manera en que aprenden y comparten conocimiento.
+        </p>
+</div>
+
+    
+
+<div class="contenedor">
+<h2>Suscribete para una mejor experiencia</h2>
+<form>
+<input type="email" placeholder="Email" required>
+<br>
+<button type="submit" class="btn-suscribir">Suscribete</button>
+</form>
+</div>
 
     <div class="contenido-principal",
      Rellena con más contenido aquí para activar el scroll -->
         <div style="height: 800px;"></div>
     </div>
+    
 
-    </body>
+
+  
+
+<!-- Footer de la pagina mauren -->
+<footer>
+<h2>Sistema de Notas - D.C.Hermana Josefina Serrano</h2>
+<p style="font-size:15px; color:#cfd8dc;">
+Plataforma de consulta de calificaciones para estudiantes y padres de familia.
+</p>
+<div style="font-size:14px; line-height:1.6;">
+<p><strong>Teléfono:</strong> <span style="color:#1455ab;">(300 836 0575)</span></p>
+<p><strong>Email:</strong> <span style="color:#1455ab;">didascalioproyecto@gmail.com</span></p>
+<p><strong>Dirección:</strong> <span style="color:#1455ab;">Kilómetro 7 Vía Guarne</span></p>
+<p> © 2025 Mi Sitio Web - Todos los derechos reservados</p>
+</footer>
+
+</body>
 </html>

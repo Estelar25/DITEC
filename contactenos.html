@@ -1,0 +1,587 @@
+<!doctype html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Contáctanos - Colegio H.J.S</title>
+
+  <style>
+
+    :root{
+
+      --bg:#f4f8fb;
+
+      --card:#ffffff;
+
+      --primary:#1e88e5; /* azul colegio */
+
+      --accent:#0f62a8;
+
+      --muted:#6b7280;
+
+      --radius:12px;
+
+      --maxw:900px;
+
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+    }
+
+    body{
+
+      margin:0;
+
+      background:linear-gradient(180deg,var(--bg),#eef6ff);
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      min-height:100vh;
+
+      padding:24px;
+
+      color:#0b1220;
+
+    }
+
+    .container{
+
+      width:100%;
+
+      max-width:var(--maxw);
+
+      background:var(--card);
+
+      border-radius:var(--radius);
+
+      box-shadow:0 8px 30px rgba(16,40,80,0.08);
+
+      overflow:hidden;
+
+      display:grid;
+
+      grid-template-columns: 1fr 420px;
+
+    }
+
+    @media (max-width:880px){
+
+      .container{ grid-template-columns: 1fr; }
+
+    }
+
+
+
+    .hero{
+
+      padding:36px;
+
+    }
+
+    .school{
+
+      display:flex;
+
+      gap:14px;
+
+      align-items:center;
+
+      margin-bottom:10px;
+
+    }
+
+    .logo{
+
+      width:64px;
+
+      height:64px;
+
+      border-radius:10px;
+
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      color:white;
+
+      font-weight:700;
+
+      font-size:20px;
+
+      box-shadow:0 6px 18px rgba(30,88,165,0.18);
+
+    }
+
+    h1{
+
+      margin:0 0 8px 0;
+
+      font-size:22px;
+
+    }
+
+    p.lead{
+
+      margin:0 0 20px 0;
+
+      color:var(--muted);
+
+    }
+
+
+
+    .info{
+
+      display:flex;
+
+      gap:12px;
+
+      flex-wrap:wrap;
+
+      margin-top:6px;
+
+    }
+
+    .info .item{
+
+      background:#f7fbff;
+
+      padding:10px 12px;
+
+      border-radius:8px;
+
+      font-size:14px;
+
+      color:#164e8a;
+
+      box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+
+    }
+
+
+
+    form.card{
+
+      padding:28px;
+
+      background:linear-gradient(180deg,#ffffff, #fbfdff);
+
+      display:flex;
+
+      flex-direction:column;
+
+      gap:12px;
+
+    }
+
+    .row{
+
+      display:flex;
+
+      gap:12px;
+
+    }
+
+    .row .field{ flex:1; }
+
+    label{
+
+      display:block;
+
+      font-size:13px;
+
+      margin-bottom:6px;
+
+      color:#223248;
+
+    }
+
+    input[type="text"],
+
+    input[type="email"],
+
+    input[type="tel"],
+
+    textarea{
+
+      width:100%;
+
+      padding:10px 12px;
+
+      border:1px solid #d6e6fb;
+
+      border-radius:8px;
+
+      font-size:15px;
+
+      outline:none;
+
+      box-sizing:border-box;
+
+    }
+
+    textarea{ min-height:120px; resize:vertical; }
+
+
+
+    .actions{
+
+      display:flex;
+
+      gap:10px;
+
+      align-items:center;
+
+      margin-top:6px;
+
+    }
+
+    button{
+
+      background:var(--primary);
+
+      color:white;
+
+      border:none;
+
+      padding:10px 16px;
+
+      border-radius:10px;
+
+      font-weight:600;
+
+      cursor:pointer;
+
+    }
+
+    button.secondary{
+
+      background:transparent;
+
+      color:var(--accent);
+
+      border:1px solid #d8e9ff;
+
+    }
+
+    .note{ font-size:13px; color:var(--muted); }
+
+
+
+    .success{
+
+      padding:10px 12px;
+
+      background:#e6fbf0;
+
+      color:#0a7a3a;
+
+      border-radius:8px;
+
+      margin-top:6px;
+
+      display:none;
+
+    }
+
+    .error{
+
+      color:#b91c1c;
+
+      font-size:13px;
+
+      display:none;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <main class="container" role="main" aria-label="Contáctanos - Colegio">
+
+    <section class="hero" aria-labelledby="title">
+
+      <div class="school" aria-hidden="true">
+
+        <div class="logo">CE</div>
+
+        <div>
+
+          <div style="font-weight:700">Colegio H.J.S</div>
+
+          <div style="font-size:13px;color:var(--muted)">Formación con valores</div>
+
+        </div>
+
+      </div>
+
+
+
+      <h1 id="title">Contáctanos</h1>
+
+      <p class="lead">¿Tienes dudas sobre alguna nota? Escríbenos y un miembro del comite administrativo te responderá pronto.</p>
+
+
+
+      <div class="info" aria-hidden="false">
+
+        <div class="item">📍 Dirección: Via Antigua Guarne Km 7</div>
+
+        <div class="item">📞 Tel: (300 836 0575)</div>
+
+        <div class="item">✉️ Email: didascalioproyecto@gmail.com</div>
+
+      </div>
+
+
+
+      <p style="margin-top:18px;color:var(--muted);font-size:14px;">
+
+        Horario de atención: Lunes a Viernes, 8:30am — 4:00pm
+
+      </p>
+
+    </section>
+
+
+
+    <form id="contactForm" class="card" onsubmit="return handleSubmit(event)" novalidate>
+
+      <div class="row">
+
+        <div class="field">
+
+          <label for="name">Nombre completo</label>
+
+          <input id="name" name="name" type="text" placeholder="Ej. Ana Pérez" required />
+
+          <div class="error" id="err-name">Por favor ingresa tu nombre.</div>
+
+        </div>
+
+
+
+        <div class="field">
+
+          <label for="grade">Grado (opcional)</label>
+
+          <input id="grade" name="grade" type="text" placeholder="Ej. 10°" />
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="field">
+
+          <label for="email">Correo electrónico</label>
+
+          <input id="email" name="email" type="email" placeholder="ejemplo@mail.com" required />
+
+          <div class="error" id="err-email">Ingresa un correo válido.</div>
+
+        </div>
+
+
+
+        <div class="field">
+
+          <label for="phone">Teléfono / WhatsApp</label>
+
+          <input id="phone" name="phone" type="tel" placeholder="Ej. +57 300 000 0000" />
+
+        </div>
+
+      </div>
+
+
+
+      <div>
+
+        <label for="message">Mensaje</label>
+
+        <textarea id="message" name="message" placeholder="Escribe tu consulta..." required></textarea>
+
+        <div class="error" id="err-message">El mensaje no puede estar vacío.</div>
+
+      </div>
+
+
+
+      <div class="actions">
+
+        <button type="submit">Enviar mensaje</button>
+
+        <button type="button" class="secondary" onclick="resetForm()">Borrar</button>
+
+        <div class="note" style="margin-left:auto">Respuesta en 1–3 días hábiles.</div>
+
+      </div>
+
+
+
+      <div class="success" id="successBox" role="status" aria-live="polite">
+
+        ✅ Tu mensaje se ha enviado (simulado). Gracias por contactarnos.
+
+      </div>
+
+    </form>
+
+  </main>
+
+
+
+  <script>
+
+    // Validación simple y demostración de envío.
+
+    function showError(id, show){
+
+      const el = document.getElementById(id);
+
+      if(!el) return;
+
+      el.style.display = show ? 'block' : 'none';
+
+    }
+
+    function setSuccess(show){
+
+      document.getElementById('successBox').style.display = show ? 'block' : 'none';
+
+    }
+
+
+
+    function validateEmail(email){
+
+      // Validación simple (no perfecta)
+
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    }
+
+
+
+    function handleSubmit(e){
+
+      e.preventDefault();
+
+      setSuccess(false);
+
+
+
+      const name = document.getElementById('name').value.trim();
+
+      const email = document.getElementById('email').value.trim();
+
+      const message = document.getElementById('message').value.trim();
+
+
+
+      let ok = true;
+
+      showError('err-name', !name);
+
+      showError('err-email', !validateEmail(email));
+
+      showError('err-message', !message);
+
+
+
+      if(!name || !validateEmail(email) || !message) ok = false;
+
+
+
+      if(!ok) {
+
+        // enfoque en el primer error visible
+
+        const firstErr = document.querySelector('.error[style*="block"]');
+
+        if(firstErr){
+
+          const input = firstErr.previousElementSibling;
+
+          if(input && input.focus) input.focus();
+
+        }
+
+        return false;
+
+      }
+
+
+
+      // --- Aquí: En una implementación real enviarías los datos al servidor ---
+
+      // Por ejemplo:
+
+      // fetch('/api/contact', { method:'POST', body: FormData ... })
+
+      // .then(...)
+
+
+
+      // Como demo mostramos mensaje de éxito y limpiamos el formulario
+
+      setSuccess(true);
+
+      e.target.reset();
+
+
+
+      // Opcional: enviar por mailto (abre el cliente de correo)
+
+      // const mailto = `mailto:contacto@colegioejemplo.edu?subject=${encodeURIComponent('Contacto desde la web')}&body=${encodeURIComponent('Nombre: '+name+'\\nEmail: '+email+'\\nMensaje: '+message)}`;
+
+      // window.location.href = mailto;
+
+
+
+      return false;
+
+    }
+
+
+
+    function resetForm(){
+
+      const form = document.getElementById('contactForm');
+
+      form.reset();
+
+      setSuccess(false);
+
+      showError('err-name', false);
+
+      showError('err-email', false);
+
+      showError('err-message', false);
+
+    }
+
+  </script>
+
+</body>
+
+</html>

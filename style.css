@@ -1,7 +1,15 @@
-<<<<<<< HEAD
 body {
       margin: 0;
       font-family: Arial, sans-serif;
+    }
+
+nav{
+  top: 0;
+  width: 100%; 
+  position: fixed;
+  background-color: #333;
+
+
     }
 
      .menu {
@@ -30,12 +38,18 @@ body {
     .menu a.active {
       background-color: #16a085;
     }
-=======
-.dropdown{
-        margin-left: 1450;
-        background-color : #012144;
-        
+
+.dropdown {
+    position: fixed; 
+    top: 20px;       
+    right: 100px;   
+    z-index: 2000;   
+  
 }
+.btn-secondary{
+  --bs-btn-bg: #0077ff;
+}
+
 .btn btn-secondary dropdown-toggle{
     background-color : #06386d;
 }
@@ -47,4 +61,28 @@ h2{text-align: center;}
  p{text-align:left;}
 
  h4{text-align: left;}  
->>>>>>> 5c299a8ccf42d1b240497f0b6f279124856d7200
+
+footer {
+background-color:#0a1a2f;
+color:#f0f0f0;
+padding:40px 30px; /* 👈 menos padding para que suba */
+text-align:center;
+font-family:Verdana, sans-serif;
+box-shadow:0 -2px 10px rgba(0,0,0,0.5);
+width: 100%;
+display: flex; /* 👈 usamos flexbox */
+flex-direction: column; /* elementos uno debajo del otro */
+justify-content: center; /* 👈 centrado vertical */
+align-items: center; /* 👈 centrado horizontal */
+min-height: 200px; /* altura del bloque */
+margin-top: 40px; /* 👈 espacio que lo sube más arriba */
+}
+footer h2 {
+margin: 0;
+color:#ffffff;
+font-size: 24px;
+}
+footer p {
+margin:10px 0;
+font-size: 16px;
+}

@@ -176,7 +176,36 @@ Nuestra misión es fortalecer a estudiantes y educadores a través de herramient
       }
     });
   </script>
+<!-- Botón Agregar Docentes -->
+<button class="btn-agregar" onclick="toggleFormulario()">
+  Agregar Docentes
+</button>
 
+<!-- Formulario oculto -->
+<div class="form-docente" id="formDocente">
+  <h3>Agregar Docente</h3>
+  <form>
+    <label>Nombre:</label>
+    <input type="text" placeholder="Ingrese nombre">
+
+    <label>Apellido:</label>
+    <input type="text" placeholder="Ingrese apellido">
+
+    <label>Email:</label>
+    <input type="email" placeholder="Ingrese correo">
+
+    <div class="acciones">
+      <button type="submit" class="guardar">Guardar</button>
+      <button type="button" class="cancelar" onclick="toggleFormulario()">Cancelar</button>
+    </div>
+  </form>
+</div>
+<script>
+function toggleFormulario() {
+  const form = document.getElementById("formDocente");
+  form.style.display = (form.style.display === "block") ? "none" : "block";
+}
+</script>
 
 </body>
 </html>

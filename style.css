@@ -52,6 +52,10 @@ nav{
   font-size: 14px;
   z-index: 999;
 }
+.btn-secondary{
+  --bs-btn-bg: #0077ff;
+}
+
 .btn btn-secondary dropdown-toggle{
     background-color : #06386d;
 }

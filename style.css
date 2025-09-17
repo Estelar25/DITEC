@@ -40,17 +40,11 @@ nav{
     }
 
 .dropdown {
-  position: absolute;
-  top: 80px;       /* Ajusta según el tamaño del avatar */
-  right: 10px;     /* Pegado al borde derecho */
-  background-color: #9ac7f8;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  z-index: 999;
+    position: fixed; 
+    top: 20px;       
+    right: 100px;   
+    z-index: 2000;   
+  
 }
 .btn-secondary{
   --bs-btn-bg: #0077ff;

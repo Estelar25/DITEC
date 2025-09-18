@@ -9,92 +9,6 @@
         <link rel="stylesheet" href="styleomar.css">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
       </script>
-        <style>
-            body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            background-color: #e6f0ff; /* Fondo azul claro */
-            font-family: Arial, sans-serif;
-            }
-
-            .contenedor {
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
-            width: 100%;
-            max-width: 500px;
-            }
-
-            h2 {
-            color: #0056b3;
-            font-size: 24px;
-            }
-
-            input[type="email"] {
-            padding: 14px;
-            border: 2px solid #007BFF;
-            border-radius: 6px;
-            width: 80%;
-            font-size: 16px;
-            margin-bottom: 20px;
-            }
-
-            .btn-suscribir {
-            background-color: #007BFF; /* Azul */
-            color: white;
-            padding: 14px 30px;
-            border: none;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-            }
-
-            .btn-suscribir:hover {
-            background-color: #0056b3; /* Azul oscuro */
-            }
-        </style>
-        <style>
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        justify-content: right;
-        background-color: #e6f0ff;
-        font-family: Arial, sans-serif;
-    }
-
-    .contenedor {
-    text-align: center;
-    background:  white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 6px 15px  rgba(0,0,0,0,2);
-    width: 100%;
-    max-width: 500px;
-    }
-
-    h2 {
-        color:  #80beff;
-        font-size: 24px;
-    }
-
-input[type="email"] {
-    padding: 14px;
-    border: 2px solid  #a5c9f0;
-    border-radius: 6px;
-    width: 80%;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-</style>
 <script>
     const avatar = document.getElementById('avatar');
     const menu = document.getElementById('dropdownMenu');
@@ -119,6 +33,7 @@ input[type="email"] {
   </script>
 </head>
 <body>
+  <div class="header">
     <div class="avatar" id="avatar" title="Perfil">
     
     <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="36px" height="36px">
@@ -157,7 +72,11 @@ input[type="email"] {
   </div>
 
   </div>
+</div>
+<div class="row">
+  <div class="column1">
 
+  
 <!-- Este es menu lateral omar -->
 <nav class="sidebar" aria-label="Menú principal">
   <ul class="menu">
@@ -174,6 +93,45 @@ input[type="email"] {
     <li class="menu-item"><a href="#ajustes">correo institucional</a></li>
   </ul>
 </nav>
+</div>
+
+ <div class="column2">      
+<!-- Este es quienes somos de estrella -->
+<div class="contenido-central">
+        <h2>¿Quiénes somos?</h2>
+        <p>¡HOLA! Somos un grupo de programadores apasionados por la educación y la tecnología. Nuestro objetivo es transformar la manera en que padres, estudiantes y maestros interactúan con las calificaciones y el rendimiento académico. <br> 
+            Hemos creado una plataforma innovadora que permite a cada estudiante ver sus calificaciones de manera clara y accesibles. Pero no solo nos enfocamos en presentar datos; queremos brindar un enfoque diferente que fomente la motivación y el aprendizaje .<br>
+            Nuestra página no solo muestra calificaciones, sino que también ofrece herramientas para que los estudiantes puedan reflexionar sobre su progreso, establecer metas y recibir reto alimentación costructiva. Creemos que cada nota cuenta una historia y queremos ayudar a los estudiantes a comprender su propio camino educativo. <br>
+            Estamos aquí para empoderar a los estudiantes y hacer que la experiencia de aprendizaje sea mas significativa y enriquecedora.
+        </p>
+        <h2>MISIÓN Y VISIÓN </h2>
+
+        <h3>Misión</h3>
+        <p>
+          Nuestra misión es fortalecer a estudiantes y educadores a través de herramientas accesibles y efectivas para la toma de notas, el estudio y la organización del conocimiento. <br> Buscamos simplificar el proceso de aprendizaje, fomentando la claridad, la retención de información y el desarrollo de hábitos de estudio productivos.</p>
+        <h4>Visión</h4>
+        <p> Aspiramos a ser la plataforma de referencia para la gestión del conocimiento educativo, reconocida por su innovación, facilidad de uso y contribución al éxito académico. <br> Imaginamos un futuro donde cada estudiante tenga a su alcance las mejores herramientas para capturar, organizar y comprender la información, transformando la manera en que aprenden y comparten conocimiento.
+        </p>
+</div>
+
+    
+
+<div class="contenedor">
+<h2>Suscribete para una mejor experiencia</h2>
+<form>
+<input type="email" placeholder="Email" required>
+<br>
+<button type="submit" class="btn-suscribir">Suscribete</button>
+</form>
+</div>
+
+    <div class="contenido-principal",
+     Rellena con más contenido aquí para activar el scroll -->
+        <div style="height: 800px;"></div>
+    </div>
+    
+</div> 
+<div class="column3">
 <!-- Este es menu derecha mari -->
        <header>
     <h1>MENU LATERAL DITEC</h1>
@@ -213,45 +171,8 @@ input[type="email"] {
       </table>
     </section>
   </main>
-        
-<!-- Este es quienes somos de estrella -->
-<div class="contenido-central">
-        <h2>¿Quiénes somos?</h2>
-        <p>¡HOLA! Somos un grupo de programadores apasionados por la educación y la tecnología. Nuestro objetivo es transformar la manera en que padres, estudiantes y maestros interactúan con las calificaciones y el rendimiento académico. <br> 
-            Hemos creado una plataforma innovadora que permite a cada estudiante ver sus calificaciones de manera clara y accesibles. Pero no solo nos enfocamos en presentar datos; queremos brindar un enfoque diferente que fomente la motivación y el aprendizaje .<br>
-            Nuestra página no solo muestra calificaciones, sino que también ofrece herramientas para que los estudiantes puedan reflexionar sobre su progreso, establecer metas y recibir reto alimentación costructiva. Creemos que cada nota cuenta una historia y queremos ayudar a los estudiantes a comprender su propio camino educativo. <br>
-            Estamos aquí para empoderar a los estudiantes y hacer que la experiencia de aprendizaje sea mas significativa y enriquecedora.
-        </p>
-        <h2>MISIÓN Y VISIÓN </h2>
-
-        <h3>Misión</h3>
-        <p>
-          Nuestra misión es fortalecer a estudiantes y educadores a través de herramientas accesibles y efectivas para la toma de notas, el estudio y la organización del conocimiento. <br> Buscamos simplificar el proceso de aprendizaje, fomentando la claridad, la retención de información y el desarrollo de hábitos de estudio productivos.</p>
-        <h4>Visión</h4>
-        <p> Aspiramos a ser la plataforma de referencia para la gestión del conocimiento educativo, reconocida por su innovación, facilidad de uso y contribución al éxito académico. <br> Imaginamos un futuro donde cada estudiante tenga a su alcance las mejores herramientas para capturar, organizar y comprender la información, transformando la manera en que aprenden y comparten conocimiento.
-        </p>
+  </div>
 </div>
-
-    
-
-<div class="contenedor">
-<h2>Suscribete para una mejor experiencia</h2>
-<form>
-<input type="email" placeholder="Email" required>
-<br>
-<button type="submit" class="btn-suscribir">Suscribete</button>
-</form>
-</div>
-
-    <div class="contenido-principal",
-     Rellena con más contenido aquí para activar el scroll -->
-        <div style="height: 800px;"></div>
-    </div>
-    
-
-
-  
-
 <!-- Footer de la pagina mauren -->
 <footer>
 <h2>Sistema de Notas - D.C.Hermana Josefina Serrano</h2>

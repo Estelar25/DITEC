@@ -9,6 +9,75 @@
         <link rel="stylesheet" href="styleomar.css">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
       </script>
+        <style>
+        .carousel {
+            position: relative;
+            width: 600px;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slide-text {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 30px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
 <script>
     const avatar = document.getElementById('avatar');
     const menu = document.getElementById('dropdownMenu');
@@ -95,7 +164,40 @@
 </nav>
 </div>
 
- <div class="column2">      
+ <div class="column2">   
+<!-- Este es slider de mateo -->
+<div class="carousel">
+    <div class="slides" id="slides">
+        <div class="slide">
+            <img src="el.jpg" alt="Slide 1">
+            <div class="slide-text">Tenemos una gran instalacion con belleza natural</div>
+        </div>
+        <div class="slide">
+            <img src="il.jpg" alt="Slide 2">
+            <div class="slide-text">Hermoso colegio</div>
+        </div>
+        <div class="slide">
+           <img class="imagen3" src="Dios.jpg" alt="Slide 3">
+            <div class="slide-text">En esta institucion somos fieles creyentes</div>
+          
+        </div>
+    </div>
+    <button class="nav-btn prev" onclick="moveSlide(-1)">❮</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">❯</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+</script>
+
+     
 <!-- Este es quienes somos de estrella -->
 <div class="contenido-central">
         <h2>¿Quiénes somos?</h2>
